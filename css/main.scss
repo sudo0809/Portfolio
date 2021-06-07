@@ -1,0 +1,220 @@
+@import "colors";
+
+body {
+  // box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  text-decoration: none;
+  // display: block;
+  background-color: $dark;
+}
+
+.navbar {
+  position: relative;
+  display: block;
+  justify-content: space-between;
+  z-index: 5;
+
+  &_logo {
+    position: absolute;
+    top: 20px;
+    color: $light;
+    align-items: center;
+    margin-left: 24px;
+    font-size: 4vw;
+  }
+}
+
+.hero {
+  height: 100vh;
+  margin: 0;
+  background: $dark;
+
+  &_container {
+    width: 100%;
+    display: flex;
+    // flex-wrap: wrap;
+
+    @media screen and (max-width: 600px) {
+      display: inline-block;
+    }
+
+    &--left {
+      background-color: $dark;
+      width: 60%;
+      position: relative;
+      // display: ov;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+      .photo {
+        margin: 0;
+        width: 100%;
+        -webkit-box-flex: 0;
+
+        z-index: 2;
+        height: 100vh;
+        object-fit: cover;
+        object-position: 40% 10%;
+
+        @media only screen and( max-width:600px) {
+          height: auto;
+          width: 100%;
+          object-fit: contain;
+          object-position: 0 0;
+          // background-color: white;
+        }
+      }
+      .gradient {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        background: linear-gradient(
+          to bottom right,
+          black 20%,
+          #baa3a0 50% 75%,
+          #000000 85%
+        );
+        z-index: 3;
+        opacity: 40%;
+
+        @media only screen and( max-width:600px) {
+          height: 97vw;
+          width: 100%;
+          object-fit: contain;
+          object-position: 0 0;
+          // background-color: white;
+        }
+      }
+    }
+
+    &--right {
+      background: $dark;
+      color: $light;
+      width: 40%;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+
+      .textbox {
+        position: relative;
+        top: 10em;
+        padding: 20px;
+        justify-content: center;
+        min-height: 250px;
+        width: fit-content;
+        @media screen and (max-width: 600px) {
+          padding-left: 30px;
+          top: -2em;
+        }
+
+        h1 {
+          padding: 15px;
+          font-size: 50px;
+          padding-bottom: 25px;
+
+          @media screen and (max-width: 750px) {
+            font-size: 40px;
+          }
+        }
+        h4 {
+          position: relative;
+          padding: 0 15px;
+          top: 15px;
+          font-size: 20px;
+
+          @media screen and (max-width: 750px) {
+            font-size: 14px;
+            top: 25px;
+          }
+        }
+
+        h2 {
+          position: relative;
+          bottom: 2em;
+          left: 10em;
+          padding: 9px 40px;
+          font-size: 25px;
+          border: 2px solid $light;
+          border-radius: 6px;
+          box-sizing: border-box;
+          width: fit-content;
+          margin: 0;
+
+          @media only screen and (max-width: 1100px) {
+            left: 0.6em;
+            bottom: -1em;
+            padding: 6px 60px;
+          }
+          @media screen and (max-width: 750px) {
+            font-size: 16px;
+            padding: 6px 43px;
+            left: 0.9em;
+          }
+          @media screen and (max-width: 600px) {
+            left: 12em;
+            bottom: 2.55em;
+            font-size: 16px;
+            padding: 9px 35px;
+          }
+        }
+        .textbox--btn {
+          position: relative;
+          padding: 9px;
+          border-radius: 6px;
+          left: 1rem;
+
+          a {
+            color: $dark;
+            font-size: 25px;
+            font-weight: bold;
+            @media screen and (max-width: 750px) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.site-main {
+  position: relative;
+  z-index: 1;
+}
+
+.section-about {
+  position: absolute;
+  margin-bottom: 100px;
+  background-color: $dark;
+
+  .container {
+    padding: 120px 0;
+    text-align: center;
+    @media screen and (max-width: 750px) {
+      padding: 60px 0;
+    }
+    .content {
+      color: $light;
+      font-size: 36px;
+      margin-left: 20%;
+      width: 60%;
+      p {
+        font-size: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: $light;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 5px 10px;
+        border: 2px solid $light;
+        border-radius: 6px;
+      }
+    }
+  }
+}
