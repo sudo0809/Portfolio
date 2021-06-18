@@ -9,10 +9,27 @@
   </head>
   <body>
     <!-- navigation bar -->
-    <nav class="navbar">
-      <a href="#" class="navbar_logo">Sugat Dhole</a>
-    </nav>
-    <!-- navigation bar collaps -->
+    <header>
+      <nav class="navbar">
+        <a href="#" class="navbar_logo">SD</a>
+        <ul class="right-nav">
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- navigation bar collaps -->
+    </header>
+
+    <div class="homepage">
+      <div class="homepage--container">
+        <div class="homepage--container--content">
+          <h1 class="intro-1">Hi,</h1>
+          <h1 class="intro-2">I'm <a>Sugat Dhole</a></h1>
+          <p class="desc">Passionate about Machine Learning and DataScience.</p>
+        </div>
+      </div>
+    </div>
 
     <div class="hero">
       <div class="hero_container">
@@ -23,16 +40,17 @@
             class="photo"
             id="photo_id"
           />
-          <div class="gradient"></div>
+          <!-- <div class="gradient"></div> -->
         </div>
         <!-- left side of hero page -->
 
         <div class="hero_container--right">
           <div class="textbox">
-            <h4>Data Science enthusiast</h4>
+            <h1>Hi,</h1>
             <h1>I'm Sugat Dhole</h1>
+            <h4>Data Science enthusiast</h4>
             <button class="textbox--btn">
-              <a href="#">More about me..</a>
+              <a href="#">Portfolio</a>
             </button>
             <h2>Hire Me</h2>
           </div>
@@ -44,7 +62,7 @@
 
     <main id="main" class="site-main">
       <div id="about" class="section-about">
-        <div class="container">
+        <div class="container-about">
           <div class="content">
             <h2>About</h2>
             <p>
@@ -65,6 +83,66 @@
           </div>
         </div>
       </div>
+      <!--about page-->
+
+      <div class="section-projects">
+        <div class="container-project">
+          <h2 class="project-heading">Projects</h2>
+          <div class="project1">
+            <div class="leftp1">
+              <img
+                src="./images/Car_Price_Prediction.png"
+                alt="Project Image"
+                class="project1-img"
+              />
+            </div>
+            <div class="rightp1">
+              <h3 class="project1-heading">Car Price Prediction</h3>
+              <p class="summary1">Used Random Forest Classifier</p>
+            </div>
+          </div>
+          <div class="project2">
+            <div class="leftp2">
+              <h3 class="project2-heading">Project</h3>
+              <p class="summary2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Quaerat quos, saepe pariatur necessitatibus at explicabo dolorum
+                deserunt ipsum sed laborum.
+              </p>
+            </div>
+            <div class="rightp2">
+              <img
+                src="./images/project-img.jpg"
+                alt="Project Image"
+                class="project2-img"
+              />
+            </div>
+          </div>
+          <div class="project3">
+            <div class="leftp3">
+              <img
+                src="./images/project-img.jpg"
+                alt="Project Image"
+                class="project3-img"
+              />
+            </div>
+            <div class="rightp3">
+              <h3 class="project3-heading">Project</h3>
+              <p class="summary3">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Quaerat quos, saepe pariatur necessitatibus at explicabo dolorum
+                deserunt ipsum sed laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Project page-->
+
+      <div class="section-skills">
+        <div class="skill-container"></div>
+      </div>
     </main>
+    <!-- /Main page-->
   </body>
 </html>
