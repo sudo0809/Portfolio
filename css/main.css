@@ -1,5 +1,6 @@
 /* Color Theme Swatches in Hex */
-/* Color Theme Swatches in Hex */
+/* Blue Spirit color Palette */
+/* -------------General----------- */
 body {
   width: 100%;
   height: 100%;
@@ -7,9 +8,22 @@ body {
   padding: 0;
   font-family: "Kumbh Sans", sans-serif;
   text-decoration: none;
-  background-color: #0c0b0b;
+  background: #e0eaf5;
 }
 
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+/* ------------Navigation Bar----------------*/
 ul {
   list-style-type: none;
 }
@@ -19,36 +33,37 @@ a {
 }
 
 header {
-  background: #000000;
+  background: #e0eaf5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .navbar {
-  position: absolute;
-  top: 1.5%;
-  left: 0%;
+  display: inline;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 5;
   width: 100%;
-  height: 60px;
-  background: #000000;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 20px;
 }
 
-header .navbar_logo {
-  text-decoration: none;
+header .navbar .navbar_logo {
   position: relative;
-  color: #fafafa;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 10%;
-  top: 10px;
-  font-size: 3em;
-  letter-spacing: 5px;
+  color: #020303;
+  margin: 0 3em;
+  font-family: "Brush Script Std";
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
   font-weight: bold;
 }
 
@@ -56,29 +71,60 @@ header .navbar .right-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 10%;
+  margin-right: 8em;
+}
+
+header .navbar .right-nav li {
+  margin: 0 2em;
 }
 
 header .navbar .right-nav a {
-  padding: 0 30px;
-  color: #fafafa;
+  display: block;
+  padding: 0 0.5em;
+  color: #020303;
   font-size: 1.2rem;
 }
 
+header .navbar .right-nav a::before {
+  content: "";
+  width: 0px;
+  height: 5px;
+  margin-right: 50px;
+  background: #ff8e2b;
+  position: absolute;
+  top: 60%;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header .navbar .right-nav a:hover::before {
+  width: 7%;
+  -webkit-transform: translateX(-12%);
+          transform: translateX(-12%);
+}
+
+nav .bgcolor {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: violet;
+  background-color: #ff8e2b;
+  border-bottom: 1px solid lightgray;
+}
+
+/* --------------Home page--------*/
 .homepage {
-  height: 100vh;
-  background: #000000;
+  height: 90vh;
+  background: linear-gradient(170deg, #ff8e2b 64%, #0d2137 30%);
 }
 
 .homepage--container {
   position: relative;
-  color: #fafafa;
   top: 200px;
 }
 
 .homepage--container--content {
   margin: 0 10%;
-  font-size: 3vh;
+  font-size: 3.5vh;
 }
 
 .homepage--container--content h1 {
@@ -90,18 +136,20 @@ header .navbar .right-nav a {
 }
 
 .homepage--container--content .intro-2 a {
-  color: #0d4098;
+  color: #0d2137;
 }
 
+/*------------hero page--------*/
 .hero {
-  height: 100vh;
+  height: 80vh;
   margin: 0 10%;
-  background: #0c0b0b;
+  background: transparent;
+  border-radius: 15px;
 }
 
 .hero_container {
   width: 100%;
-  margin: 10% 0;
+  margin: 15% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,8 +162,11 @@ header .navbar .right-nav a {
 }
 
 .hero_container--left {
-  background-color: #0c0b0b;
-  width: 60%;
+  background-color: transparent;
+  border-radius: 14px;
+  width: 55%;
+  margin-top: 30px;
+  margin-left: 30px;
   position: relative;
 }
 
@@ -127,7 +178,8 @@ header .navbar .right-nav a {
 
 .hero_container--left .photo {
   margin: 0;
-  width: 100%;
+  width: 95%;
+  border-radius: 14px;
   -webkit-box-flex: 0;
   z-index: 2;
   height: 70vh;
@@ -148,32 +200,12 @@ header .navbar .right-nav a {
   }
 }
 
-.hero_container--left .gradient {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(20%, black), color-stop(50%, #baa3a0), color-stop(85%, #000000));
-  background: linear-gradient(to bottom right, black 20%, #baa3a0 50% 75%, #000000 85%);
-  z-index: 3;
-  opacity: 40%;
-}
-
-@media only screen and (max-width: 600px) {
-  .hero_container--left .gradient {
-    height: 97vw;
-    width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-    -o-object-position: 0 0;
-       object-position: 0 0;
-  }
-}
-
 .hero_container--right {
-  background: #0c0b0b;
-  color: #efe6e5;
+  background: #2e77ae;
+  border-radius: 15px;
+  color: #020303;
   width: 40%;
+  margin-top: 30px;
 }
 
 @media screen and (max-width: 600px) {
@@ -185,7 +217,7 @@ header .navbar .right-nav a {
 .hero_container--right .textbox {
   position: relative;
   top: 5em;
-  padding: 0 3em;
+  padding: 0 2em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -202,7 +234,7 @@ header .navbar .right-nav a {
 
 .hero_container--right .textbox h1 {
   padding: 5px 15px;
-  font-size: 50px;
+  font-size: 2rem;
   margin-block: 0;
 }
 
@@ -216,7 +248,7 @@ header .navbar .right-nav a {
   position: relative;
   margin-block: 0;
   padding: 1.7em 15px;
-  font-size: 30px;
+  font-size: 1.5em;
 }
 
 @media screen and (max-width: 750px) {
@@ -229,10 +261,10 @@ header .navbar .right-nav a {
 .hero_container--right .textbox h2 {
   position: relative;
   bottom: 2em;
-  left: 10em;
+  left: 7em;
   padding: 9px 40px;
   font-size: 25px;
-  border: 2px solid #efe6e5;
+  border: 2px solid #e0eaf5;
   border-radius: 6px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -275,7 +307,7 @@ header .navbar .right-nav a {
 }
 
 .hero_container--right .textbox .textbox--btn a {
-  color: #0c0b0b;
+  color: #020303;
   font-size: 25px;
   font-weight: bold;
 }
@@ -286,54 +318,55 @@ header .navbar .right-nav a {
   }
 }
 
+/*------------about page-------*/
 .site-main {
   position: relative;
   z-index: 1;
   max-width: 100%;
 }
 
-.section-about {
+.site-main .section-about {
   position: absolute;
   margin-bottom: 100px;
-  background-color: #0c0b0b;
 }
 
-.section-about .container-about {
+.site-main .section-about .container-about {
   padding: 8em 0;
   text-align: center;
 }
 
 @media screen and (max-width: 750px) {
-  .section-about .container-about {
+  .site-main .section-about .container-about {
     padding: 60px 0;
   }
 }
 
-.section-about .container-about .content {
-  color: #72f2f2;
+.site-main .section-about .container-about .content {
+  color: #020303;
   font-size: 36px;
   margin-left: 20%;
   width: 60%;
 }
 
-.section-about .container-about .content p {
+.site-main .section-about .container-about .content p {
   font-size: 20px;
-  color: #efe6e5;
+  color: #020303;
 }
 
-.section-about .container-about .content a {
+.site-main .section-about .container-about .content a {
   text-decoration: none;
-  color: #72f2f2;
+  color: #020303;
   font-size: 24px;
   font-weight: bold;
   padding: 5px 10px;
-  border: 2px solid #72f2f2;
+  border: 2px solid #020303;
   border-radius: 6px;
 }
 
+/*----------projects page-------*/
 .section-projects {
   position: absolute;
-  background-color: #0c0b0b;
+  background-color: #e0eaf5;
   margin-top: 80vh;
 }
 
@@ -344,7 +377,7 @@ header .navbar .right-nav a {
 }
 
 .section-projects .container-project .project-heading {
-  color: #efe6e5;
+  color: #020303;
   text-align: center;
   font-size: 5vh;
 }
@@ -373,17 +406,41 @@ header .navbar .right-nav a {
 }
 
 .section-projects .container-project .project1 .rightp1 .project1-heading {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
-  color: #efe6e5;
+  color: #020303;
   margin-top: 15px;
+  text-align: center;
 }
 
 .section-projects .container-project .project1 .rightp1 .summary1 {
   margin-block: 0;
-  color: #efe6e5;
+  color: #020303;
   font-size: 24px;
-  padding: 0 20px;
+  padding: 0 30px;
+  text-align: left;
+}
+
+.section-projects .container-project .project1 .rightp1 .link {
+  position: absolute;
+  margin-top: 6px;
+  color: #020303;
+  padding: 3px 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: #2e77ae;
+}
+
+.section-projects .container-project .project1 .rightp1 .blog {
+  left: 36.5rem;
+}
+
+.section-projects .container-project .project1 .rightp1 .git {
+  left: 46rem;
+}
+
+.section-projects .container-project .project1 .rightp1 .web {
+  left: 54rem;
 }
 
 .section-projects .container-project .project2 {
@@ -412,13 +469,13 @@ header .navbar .right-nav a {
 .section-projects .container-project .project2 .leftp2 .project2-heading {
   font-size: 36px;
   font-weight: bold;
-  color: #efe6e5;
+  color: #020303;
   margin-top: 15px;
 }
 
 .section-projects .container-project .project2 .leftp2 .summary2 {
   margin-left: 0;
-  color: #efe6e5;
+  color: #020303;
   font-size: 24px;
   height: 10em;
   padding: 0 10px;
@@ -450,14 +507,14 @@ header .navbar .right-nav a {
 .section-projects .container-project .project3 .rightp3 .project3-heading {
   font-size: 36px;
   font-weight: bold;
-  color: #efe6e5;
+  color: #020303;
   margin-top: 15px;
 }
 
 .section-projects .container-project .project3 .rightp3 .summary3 {
   margin-right: 0;
   margin-block: 0;
-  color: #efe6e5;
+  color: #020303;
   font-size: 24px;
   height: 10em;
   padding: 0 10px;
