@@ -28,6 +28,10 @@
           <h1 class="intro-2">I'm <a>Sugat Dhole</a></h1>
           <p class="desc">Passionate about Machine Learning and DataScience.</p>
         </div>
+        <img class="homeicon" src="images\boy_sleeping_in_bed.png" alt="img-1">
+        <img class="thought" src="images\thought-doodle1.png" alt="">
+        <img class="homeicon indream-h" src="images\boy_sleeping_in_bed.png" alt="img-1">
+        <img class="thought indream-t" src="images\thought-doodle.png" alt="">
       </div>
     </div>
      <!-- homepage -->
@@ -45,7 +49,7 @@
         <!-- left side of hero page -->
 
         <div class="hero_container--right">
-          <div class="textbox">
+          <!-- <div class="textbox">
             <h1>Hi,</h1>
             <h1>I'm Sugat Dhole</h1>
             <h4>Data Science enthusiast</h4>
@@ -53,6 +57,44 @@
               <a href="#">Portfolio</a>
             </button>
             <h2>Hire Me</h2>
+          </div> -->
+          <div class="slider">
+            <div class="slides">
+              <input type="radio" name="radio-btn" id="radio1" />
+              <input type="radio" name="radio-btn" id="radio2" />
+              <input type="radio" name="radio-btn" id="radio3" />
+              <input type="radio" name="radio-btn" id="radio4" />
+      
+              <div class="slide first">
+                <img class="doodle" src="images/boy-with-laptop.png" alt="" />
+                <p class="text">“We have two lives, and the second begins when we realize we only have one.” </p>
+                <p class="author">- Confucius</p> 
+              </div>
+              <div class="slide second">
+                <img src="images/temp.jpeg" alt="" />
+              </div>
+              <div class="slide third">
+                <img src="images/project-img.jpg" alt="" />
+              </div>
+              <div class="slide fourth">
+                <img src="images/img.jpeg" alt="" />
+              </div>
+              <!-- slide images end -->
+              <!-- automatic navigation start -->
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+              </div>
+              <!--automatic nav ends  -->
+              <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+              </div>
+            </div>
           </div>
         </div>
         <!-- right side of hero page -->
@@ -60,7 +102,7 @@
     </div>
     <!-- /Hero page -->
 
-    <div id="main" class="site-main">
+    <div id="main" class="about">
       <div id="about" class="section-about">
         <div class="container-about">
           <div class="content">
@@ -68,19 +110,21 @@
             <p>
               Hello Visitors! Myself Sugat, a Data Science enthusiast, a Final-Year Student
               from Dr B R Ambedkar National Institute of Technology, Jalandhar
-              and a guy slightly obsessed with string Instruments . Also I
-              am the co-founder of myhealthyconsious.com. I'm currently working
+              and a guy slightly obsessed with string Instruments. I'm currently working
               on End to End Projects of my build ML models. I am also fond of
               writing Blogs and try to help the community by contribution
               helping videos of the projects I have been able to make.
             </p>
             <a
-              href="https://drive.google.com/file/d/1jScnD3X0_LCFm2vbhtR3nnCyP-pBO2AR/view?usp=sharing"
-              class="btn"
-              target="_blank"
-              >Download CV</a
+            href="https://drive.google.com/file/d/1jScnD3X0_LCFm2vbhtR3nnCyP-pBO2AR/view?usp=sharing"
+            class="btn"
+            target="_blank"
+            >Download CV</a
             >
           </div>
+          <div class="box"></div>
+          <div class="box box-shadow"></div>
+
         </div>
       </div>
     </div>
@@ -102,10 +146,10 @@
             <p class="summary1">- Random forest Regressor is used to train model.</p>
             <p class="summary1">- Flask form is used to input the user values.</p>
             <p class="summary1">- Heroku platform is ued to deploy the application.</p>
-            <a class="link blog"  href="https://medium.com/@sugatdhole/first-heroku-deployment-of-your-machine-learning-model-3f60aafd478d" target="_blank">
+            <a class="link-button blog"  href="https://medium.com/@sugatdhole/first-heroku-deployment-of-your-machine-learning-model-3f60aafd478d" target="_blank">
             Blog Post</a>
-            <a class="link git" href="https://github.com/sudo0809/Car-Price-Prediction" target="_blank">GitHub</a>
-            <a class="link web" href="https://carpriceprediction-001.herokuapp.com/" target="_blank">Webpage</a>
+            <a class="link-button git" href="https://github.com/sudo0809/Car-Price-Prediction" target="_blank">GitHub</a>
+            <a class="link-button web" href="https://carpriceprediction-001.herokuapp.com/" target="_blank">Webpage</a>
           </div>
         </div>
         <div class="project2">
@@ -151,7 +195,16 @@
     </div>
     <!-- /Skill page-->
 
-    <!-- <script src="navbar_scroll.js"></script> -->
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio'+counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 5000);
+      </script>
 
   </body>
 </html>
