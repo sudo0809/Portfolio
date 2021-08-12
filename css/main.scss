@@ -436,7 +436,6 @@ nav{
           font-size: 20px;
           border-radius: 8px;
           background-color:$about-background
-          
         }
         .blog{
           left: 36.5rem;
@@ -456,27 +455,45 @@ nav{
       margin: 0 10%;
       position: relative;
       .rightp2 {
-        display: contents;
+        // display: contents;
         .project2-img {
-          width: 70vh;
-          border-radius: 6px;
+          border-radius: 9px;
         }
       }
       .leftp2 {
         display: block;
         text-align: center;
+        width: 60%;
         .project2-heading {
           font-size: 36px;
           font-weight: bold;
           color: $dark;
           margin-top: 15px;
+          text-align: center;
         }
         .summary2 {
-          margin-left: 0;
+          margin-block: 0;
+          // margin-left: 0;
           color: $dark;
-          font-size: 24px;
-          height: 10em;
-          padding: 0 10px;
+          font-size: 22px;
+          padding-left: 20px;
+          padding-right: 10px;
+          text-align: left;
+        }
+        .next-line{
+          padding-left: 35px;
+        }
+        .link-button{
+          position: absolute;
+          margin-top: 6px;
+          color: $color-shade-5;
+          padding:3px 20px;
+          font-size: 20px;
+          border-radius: 8px;
+          background-color:$about-background;
+        }
+        .git{
+          left: 3rem;
         }
       }
     }

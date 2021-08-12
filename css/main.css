@@ -538,18 +538,14 @@ nav .bgcolor {
   position: relative;
 }
 
-.section-projects .container-project .project2 .rightp2 {
-  display: contents;
-}
-
 .section-projects .container-project .project2 .rightp2 .project2-img {
-  width: 70vh;
-  border-radius: 6px;
+  border-radius: 9px;
 }
 
 .section-projects .container-project .project2 .leftp2 {
   display: block;
   text-align: center;
+  width: 60%;
 }
 
 .section-projects .container-project .project2 .leftp2 .project2-heading {
@@ -557,14 +553,34 @@ nav .bgcolor {
   font-weight: bold;
   color: #020303;
   margin-top: 15px;
+  text-align: center;
 }
 
 .section-projects .container-project .project2 .leftp2 .summary2 {
-  margin-left: 0;
+  margin-block: 0;
   color: #020303;
-  font-size: 24px;
-  height: 10em;
-  padding: 0 10px;
+  font-size: 22px;
+  padding-left: 20px;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.section-projects .container-project .project2 .leftp2 .next-line {
+  padding-left: 35px;
+}
+
+.section-projects .container-project .project2 .leftp2 .link-button {
+  position: absolute;
+  margin-top: 6px;
+  color: #020303;
+  padding: 3px 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: #2382a7;
+}
+
+.section-projects .container-project .project2 .leftp2 .git {
+  left: 3rem;
 }
 
 .section-projects .container-project .project3 {
