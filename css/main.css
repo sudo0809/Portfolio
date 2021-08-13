@@ -131,11 +131,15 @@ header .navbar .right-nav .nav-item:hover::before {
 
 .homepage--container--content h1 {
   margin-block: 0;
-  color: #173178;
+  color: #020303;
 }
 
 .homepage--container--content .intro-1 {
   padding-bottom: 15px;
+}
+
+.homepage--container--content .intro-2 {
+  color: #173178;
 }
 
 .homepage--container .homeicon {
