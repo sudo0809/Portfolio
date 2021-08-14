@@ -209,7 +209,8 @@ header .navbar .right-nav .nav-item:hover::before {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 36px;
+  font-size: 50px;
+  font-weight: bold;
   margin: 0 40% 6% 40%;
 }
 
