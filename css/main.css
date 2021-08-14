@@ -4,7 +4,11 @@
 body {
   width: 100%;
   height: 100%;
-  margin: 0;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
   font-family: "Kumbh Sans", sans-serif;
   text-decoration: none;
@@ -36,10 +40,9 @@ a {
 
 header {
   background: #e0eaf5;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
-  height: 6em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -56,17 +59,18 @@ header .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 20px;
+  margin: 5px 0;
 }
 
 header .navbar .navbar_logo {
   position: relative;
   color: #020303;
-  margin: 0 3em;
-  font-family: "Brush Script Std";
-  font-size: 3rem;
-  letter-spacing: 0.3rem;
+  margin: 0 10%;
+  font-size: 2.5rem;
   font-weight: bold;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 header .navbar .right-nav {
@@ -113,7 +117,10 @@ header .navbar .right-nav .nav-item:hover::before {
 /* --------------Home page--------*/
 /* ------------------------------ */
 .homepage {
-  height: 90vh;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  height: 650px;
   width: 100%;
   margin-bottom: 6em;
   background: linear-gradient(170deg, #ff8e2b 64%, #173178 40% 90%, #e0eaf5 60%);
@@ -127,7 +134,7 @@ header .navbar .right-nav .nav-item:hover::before {
 
 .homepage--container--content {
   margin: 0 10%;
-  font-size: 3.5vh;
+  font-size: 2rem;
 }
 
 .homepage--container--content h1 {
@@ -143,39 +150,12 @@ header .navbar .right-nav .nav-item:hover::before {
   color: #173178;
 }
 
-.homepage--container .homeicon {
-  position: absolute;
-  margin: 0 50%;
-  top: 190px;
-  rotate: -4deg;
-}
-
-.homepage--container .thought {
-  position: absolute;
-  margin-left: 74%;
-  width: 22em;
-  top: 0;
-}
-
-.homepage--container .indream-h {
-  width: 180px;
-  padding: 0 0 0 400px;
-  top: 100px;
-  margin-right: 0;
-}
-
-.homepage--container .indream-t {
-  width: 100px;
-  top: 80px;
-  left: 180px;
-}
-
 /* ------------------------------ */
 /*----------- about page ---------*/
 /* ------------------------------ */
 .about {
   position: relative;
-  max-width: 100%;
+  width: 100%;
 }
 
 .about .section-about {
@@ -185,7 +165,8 @@ header .navbar .right-nav .nav-item:hover::before {
 
 .about .section-about .container-about {
   padding: 6em 0;
-  text-align: center;
+  width: 60%;
+  margin: 0 20%;
 }
 
 @media screen and (max-width: 750px) {
@@ -199,8 +180,8 @@ header .navbar .right-nav .nav-item:hover::before {
   z-index: 2;
   color: #e0eaf5;
   font-size: 36px;
-  margin-left: 20%;
-  width: 60%;
+  text-align: center;
+  width: 100%;
 }
 
 .about .section-about .container-about .content .heading {
@@ -210,8 +191,7 @@ header .navbar .right-nav .nav-item:hover::before {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 50px;
-  font-weight: bold;
-  margin: 0 40% 6% 40%;
+  margin: 0 40% 5% 40%;
 }
 
 .about .section-about .container-about .content p {
@@ -230,17 +210,18 @@ header .navbar .right-nav .nav-item:hover::before {
 
 .about .section-about .container-about .box {
   position: absolute;
-  width: 80%;
   height: 400px;
+  width: 80%;
+  left: 0px;
+  margin: 0 10%;
   background-color: #454678;
   border-radius: 15px;
   top: 80px;
-  left: 130px;
 }
 
 .about .section-about .container-about .box-shadow {
   top: 68px;
-  left: 140px;
+  left: 15px;
   background-color: #173178;
 }
 
@@ -250,23 +231,23 @@ header .navbar .right-nav .nav-item:hover::before {
 .section-projects {
   position: relative;
   background-color: #e0eaf5;
+  width: 100%;
 }
 
 .section-projects .container-project {
-  margin: 4em 0;
   display: block;
-  width: 100%;
+  width: 80%;
+  margin: 0 10%;
 }
 
 .section-projects .container-project .project-heading {
   color: #020303;
   padding: 0 20px 0 20px;
-  font-size: 36px;
+  font-size: 45px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 45%;
-  margin-bottom: 60px;
+  margin: 10% 40% 5% 40%;
   border-bottom: 4px solid #173178;
 }
 
@@ -276,7 +257,7 @@ header .navbar .right-nav .nav-item:hover::before {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 40px;
-  margin: 0 10%;
+  width: 100%;
 }
 
 .section-projects .container-project .project1 .leftp1 {
@@ -284,7 +265,7 @@ header .navbar .right-nav .nav-item:hover::before {
 }
 
 .section-projects .container-project .project1 .leftp1 .project1-img {
-  width: 70vh;
+  width: 45%;
   border-radius: 6px;
 }
 
@@ -310,31 +291,22 @@ header .navbar .right-nav .nav-item:hover::before {
 }
 
 .section-projects .container-project .project1 .rightp1 .link-button {
-  position: absolute;
-  margin-top: 6px;
+  position: relative;
   color: #e0eaf5;
-  padding: 3px 20px;
+  padding: 5px 20px;
+  top: 15px;
+  right: 40px;
+  margin-right: 30px;
   font-size: 20px;
   border-radius: 5px;
   background-color: #173178;
-}
-
-.section-projects .container-project .project1 .rightp1 .blog {
-  left: 36.5rem;
-}
-
-.section-projects .container-project .project1 .rightp1 .git {
-  left: 46rem;
-}
-
-.section-projects .container-project .project1 .rightp1 .web {
-  left: 54rem;
 }
 
 .section-projects .container-project .project2 {
   margin-bottom: 40px;
   padding: 20px  0  20px 0;
   background-color: #d1dee9;
+  border-radius: 8px;
 }
 
 .section-projects .container-project .project2-container {
@@ -342,17 +314,17 @@ header .navbar .right-nav .nav-item:hover::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 10%;
 }
 
 .section-projects .container-project .project2-container .rightp2 .project2-img {
+  padding-left: 20px;
   border-radius: 9px;
 }
 
 .section-projects .container-project .project2-container .leftp2 {
   display: block;
   text-align: center;
-  width: 60%;
+  width: 50%;
 }
 
 .section-projects .container-project .project2-container .leftp2 .project2-heading {
@@ -367,13 +339,13 @@ header .navbar .right-nav .nav-item:hover::before {
   margin-block: 0;
   color: #020303;
   font-size: 22px;
-  padding-left: 20px;
+  padding-left: 30px;
   padding-right: 10px;
   text-align: left;
 }
 
 .section-projects .container-project .project2-container .leftp2 .next-line {
-  padding-left: 35px;
+  padding-left: 45px;
 }
 
 .section-projects .container-project .project2-container .leftp2 .link-button {
@@ -396,7 +368,6 @@ header .navbar .right-nav .nav-item:hover::before {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 40px;
-  margin: 0 10%;
 }
 
 .section-projects .container-project .project3 .leftp3 {
@@ -404,7 +375,8 @@ header .navbar .right-nav .nav-item:hover::before {
 }
 
 .section-projects .container-project .project3 .leftp3 .project3-img {
-  width: 70vh;
+  width: 120%;
+  height: 250px;
   border-radius: 6px;
 }
 
@@ -445,7 +417,7 @@ header .navbar .right-nav .nav-item:hover::before {
 }
 
 .contact .heading h2 {
-  font-size: 36px;
+  font-size: 45px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -491,7 +463,7 @@ header .navbar .right-nav .nav-item:hover::before {
   border-radius: 14px;
   -webkit-box-flex: 0;
   z-index: 2;
-  height: 70vh;
+  height: 522px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 40% 10%;
