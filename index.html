@@ -9,14 +9,12 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
         <a href="#" class="navbar_logo">SUGAT</a>
         <ul class="right-nav">
           <li><a class="nav-item" href="#" data-page="about">About</a></li>
           <li><a class="nav-item" href="#" data-page="projects">Projects</a></li>
           <li><a class="nav-item" href="#" data-page="contact">Contact</a></li>
         </ul>
-      </nav>
       <!-- navigation bar collaps -->
     </header>
      <!-- navigation bar -->
@@ -200,6 +198,13 @@
           counter = 1;
         }
       }, 5000);
+    </script>
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    })
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

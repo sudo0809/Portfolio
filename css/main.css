@@ -1,6 +1,13 @@
 /* Color Theme Swatches in Hex */
 /* Blue Spirit color Palette */
 /* -------------General----------- */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -30,68 +37,69 @@ body::-webkit-scrollbar-thumb {
 /* ------------------------------ */
 /* ------------Navigation Bar----------------*/
 /* ------------------------------ */
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 header {
-  background: #e0eaf5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1920px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  padding: 20px 100px;
+  z-index: 1000;
+}
+
+header .navbar_logo {
   position: relative;
-  left: 0;
-  right: 0;
+  font-weight: 750;
+  color: #020303;
+  text-decoration: none;
+  font-size: 2em;
+  letter-spacing: 2px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+header ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-header .navbar {
-  display: inline;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  z-index: 5;
-  width: 100%;
-  background-color: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 5px 0;
-}
-
-header .navbar .navbar_logo {
+header ul li {
   position: relative;
-  color: #020303;
-  margin: 0 10%;
-  font-size: 2.5rem;
-  font-weight: bold;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-header .navbar .right-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: 8em;
-}
-
-header .navbar .right-nav li {
+  list-style: none;
   margin: 0 2em;
 }
 
-header .navbar .right-nav a {
-  display: block;
-  padding: 0 0.5em;
+header ul li a {
+  list-style: none;
+  position: relative;
+  text-decoration: none;
   color: #020303;
   font-size: 1.2rem;
+  font-weight: 500px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  letter-spacing: 2px;
 }
 
-header .navbar .right-nav .nav-item::before {
+header ul li .nav-item::before {
   content: "";
   position: relative;
   display: block;
@@ -108,7 +116,42 @@ header .navbar .right-nav .nav-item::before {
   transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
-header .navbar .right-nav .nav-item:hover::before {
+header ul li .nav-item:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.sticky {
+  padding: 5px 100px;
+  background: #173178;
+}
+
+.sticky .navbar_logo {
+  color: #ff8e2b;
+}
+
+.sticky ul li a {
+  color: #e0eaf5;
+}
+
+.sticky ul li .nav-item::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 3px;
+  bottom: -25px;
+  left: 0;
+  background: #ff8e2b;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.sticky ul li .nav-item:hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
@@ -120,7 +163,7 @@ header .navbar .right-nav .nav-item:hover::before {
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
-  height: 650px;
+  height: 800px;
   width: 100%;
   margin-bottom: 6em;
   background: linear-gradient(170deg, #ff8e2b 64%, #173178 40% 90%, #e0eaf5 60%);
