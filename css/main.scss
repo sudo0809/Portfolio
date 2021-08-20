@@ -230,7 +230,7 @@ header{
   padding-top: 100px;
   
   .section-about {
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
     background-color: $color-shade-1;
     // padding-top: 50px;
   
@@ -262,8 +262,19 @@ header{
         }
         p {
           font-size: 20px;
+          padding-bottom: 15px;
+          a{
+            text-decoration: none;
+            color: $color-shade-4;
+          }
+          .link{
+            color: $color-shade-4;
+            &:hover{
+              color: $color-shade-5;
+            }
+          }
         }
-        a {
+        .resume {
           text-decoration: none;
           color: $dark;
           font-size: 24px;
@@ -271,17 +282,14 @@ header{
           padding: 5px 10px;
           background-color: $color-shade-1;
           border-radius: 6px;
-          // position: absolute;
-          // display: flex;
           margin: 20px 36%;
         }
       }
       .box{
         position: absolute;
-        height: 400px;
+        height: 540px;
         width: 120%;
         left: -100px;
-        // margin: 0 10%;
         background-color: rgb(69, 70, 120);
         border-radius: 15px;
         top: 80px;
@@ -424,7 +432,7 @@ header{
         .project3-img {
           position: relative;   
           // right: 10px;
-          height: 400px;
+          height: 300px;
           border-radius: 6px;
         }
       }
@@ -444,7 +452,7 @@ header{
           color: $dark;
           font-size: 24px;
           height: 10em;
-          padding: 0 10px;
+          padding:20px;
         }
       }
     }

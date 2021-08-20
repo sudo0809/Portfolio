@@ -293,7 +293,6 @@ header ul li .nav-item:hover::before {
 }
 
 .about .section-about {
-  margin-bottom: 100px;
   background-color: #e0eaf5;
 }
 
@@ -334,9 +333,23 @@ header ul li .nav-item:hover::before {
 
 .about .section-about .container-about .content p {
   font-size: 20px;
+  padding-bottom: 15px;
 }
 
-.about .section-about .container-about .content a {
+.about .section-about .container-about .content p a {
+  text-decoration: none;
+  color: #ff8e2b;
+}
+
+.about .section-about .container-about .content p .link {
+  color: #ff8e2b;
+}
+
+.about .section-about .container-about .content p .link:hover {
+  color: #020303;
+}
+
+.about .section-about .container-about .content .resume {
   text-decoration: none;
   color: #020303;
   font-size: 24px;
@@ -349,7 +362,7 @@ header ul li .nav-item:hover::before {
 
 .about .section-about .container-about .box {
   position: absolute;
-  height: 400px;
+  height: 540px;
   width: 120%;
   left: -100px;
   background-color: #454678;
@@ -510,7 +523,7 @@ header ul li .nav-item:hover::before {
 
 .section-projects .container-project .project3 .leftp3 .project3-img {
   position: relative;
-  height: 400px;
+  height: 300px;
   border-radius: 6px;
 }
 
@@ -533,7 +546,7 @@ header ul li .nav-item:hover::before {
   color: #020303;
   font-size: 24px;
   height: 10em;
-  padding: 0 10px;
+  padding: 20px;
 }
 
 /* ------------------------------ */
